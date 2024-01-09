@@ -1,7 +1,9 @@
 <h2>Small react applications</h2>
 
-Some small react applications, done with the scope to learn and understand react. To start up the first app <b/>food order app execute:</b> <br/> 
-<b>npm start --prefix food-order-app </b>
+Some small react applications, done with the scope to learn and understand react.
+
+1. Run: <b>npm install</b><br/>
+2. To start up the first app <b/>food order app</b>  execute: <b>npm start --prefix food-order-app </b>
 
 <h3>Printscreens with the actual stage of the application:</h3>
 
