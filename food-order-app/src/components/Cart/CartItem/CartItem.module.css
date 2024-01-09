@@ -1,0 +1,41 @@
+li.cart-item {
+    border-bottom: 1px dashed #b52d2d;
+    padding: 15px 0px;
+    display: grid;
+    grid: 1fr/ minmax(300px, 1fr) minmax(40px, 0.25fr);
+}
+
+.summary {
+    float: left;
+    clear: both;
+    grid-row: 2/3;
+    width: 30%;
+    margin-top: 20px;
+
+    .counter {
+        border: 1px dashed #aeabab;
+        padding: 3px 10px;
+        border-radius: 3px;
+        float: right
+    }
+
+    .price {
+        color: #aa4a0a;
+        font-weight: 600;
+        bottom: 0;
+    }
+
+    .counter {
+        margin-top: -5px;
+    }
+}
+
+.actions {
+    grid-row: span 2;
+    align-self: center;
+    min-width: 155px;
+
+    button:last-of-type {
+        margin-left: 3px !important;
+    }
+}

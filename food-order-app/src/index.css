@@ -11,3 +11,17 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+
+
+#modalOverlay{
+  position: absolute; /*hidden from the page*/
+}
+
+/*text styles*/
+.text-danger{
+  color: #c42e2e;
+  font-style: italic;
+  clear: left;
+  text-wrap: nowrap;
+}
