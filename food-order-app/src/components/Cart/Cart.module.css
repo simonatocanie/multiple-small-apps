@@ -1,0 +1,23 @@
+.amount {
+    grid-row: 3/4;
+    grid-column: span 2;
+    display: flex;
+    justify-content: space-between;
+    margin-top: 15px;
+
+    & label {
+        height: 100%;
+
+        &&:first-of-type {
+            text-align: left;
+            font-weight: 600;
+        }
+
+        &&:last-of-type {
+            grid-column: 2;
+            text-align: right;
+            font-weight: 700;
+            color: #e03939;
+        }
+    }
+}

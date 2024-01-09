@@ -1,0 +1,35 @@
+li.meal-item{
+    display: grid;
+    grid: 1fr/ minmax(300px, 3fr) minmax(80px, 1fr);
+
+    .price {
+        color: #aa4a0a;
+        font-weight: 600;
+    }
+
+    .description {
+        font-style: italic;
+    }
+
+    h3 {
+        margin: 0px;
+    }
+}
+
+
+.actions {
+    float: left;
+    width: max-content;
+    margin: 7px auto 0px auto;
+
+    button:first-of-type {
+        margin-right: 2px;
+    }
+
+    @media (max-width: 1025px) {
+        clear: left;
+        display: block;
+        width: 40px;
+        float: left;
+    }
+}

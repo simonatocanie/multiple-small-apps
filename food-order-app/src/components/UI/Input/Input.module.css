@@ -1,0 +1,19 @@
+.form-group {
+    input {
+        width: 35px;
+        margin-left: 0px;
+        padding: 4px;
+        border-radius: 3px;
+        border: 1.5px solid gray;
+        float: right;
+
+        @media (max-width: 869px) {
+            float: left;
+        }
+    }
+
+    label {
+        padding: 10px 0px;
+    }
+
+}
