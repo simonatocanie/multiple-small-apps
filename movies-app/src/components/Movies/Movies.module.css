@@ -1,0 +1,10 @@
+.moviesContainer {
+    max-height: 95%;
+    overflow-y: hidden;
+    margin-bottom: 120px;
+
+    h2 {
+        padding-bottom: 5px;
+        border-bottom: 1px dashed #c0bfbf;
+    }
+}

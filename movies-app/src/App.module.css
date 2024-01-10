@@ -1,0 +1,29 @@
+html,
+body,
+.app {
+    height: 100%;
+    display: grid;
+}
+
+body {
+    background-color: #f9e2fc;
+}
+
+.app {
+    grid: min-content auto min-content/ 30% 70%;
+}
+
+header,
+footer {
+    grid-column: span 2;
+}
+
+aside {
+    grid-row: 2/3;
+    grid-column: 1/2;
+}
+
+main {
+    grid-row: 2/3;
+    grid-column: 2/3;
+}
