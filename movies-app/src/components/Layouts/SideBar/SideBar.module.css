@@ -1,0 +1,16 @@
+aside {
+    background-color: rgb(110, 23, 190);
+    margin: 40px auto;
+    width: 90%;
+    height: 55%;
+    box-shadow: 0 2px 8px rgba(125, 125, 125, 0.749);
+    box-sizing: border-box;
+    border-radius: 5px;
+
+    ul {
+        list-style-type: none;
+        cursor: pointer;
+        padding: 0px;
+        margin: 0px;
+    }
+}

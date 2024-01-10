@@ -1,0 +1,10 @@
+footer {
+    background-color: #000000;
+    padding: 20px;
+    color: white;
+    position: fixed;
+    grid-row: 3/4;
+    grid-column: span 3;
+    bottom: 0;
+    width: 100%;
+}
