@@ -7,16 +7,11 @@ const SideBar = props => {
     console.log('sidebar')
     const ctxMovie = useContext(MoviesContext);
 
-    const onGetMoviesHandler = (event) => {
-        // event.preventDefault();
-        console.log('movie list');
-        console.log(ctxMovie);
-    }
     return (
         <aside>
             <ul>
                 <li>
-                    <Button className='button sidebar' label='Movie List' onClick={onGetMoviesHandler} />
+                    <Button className='button sidebar' label='Movie List' onClick={ctxMovie.getMovies} />
                 </li>
                 <li>
                     <Button className='button sidebar' label='Another List' />

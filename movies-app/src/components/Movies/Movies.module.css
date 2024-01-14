@@ -1,4 +1,5 @@
 .moviesContainer {
+    float: left;
     max-height: 95%;
     overflow-y: hidden;
     margin-bottom: 120px;
