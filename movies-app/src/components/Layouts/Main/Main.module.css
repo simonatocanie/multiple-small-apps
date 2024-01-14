@@ -4,3 +4,8 @@ main {
     margin: auto;
     border-radius: 3px;
 }
+
+.containerSpinner {
+    width: 20%;
+    margin: 100px auto auto auto;
+}

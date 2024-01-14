@@ -1,0 +1,43 @@
+.form-group {
+    width: 100%;
+    display: inline-block;
+
+    & label {
+        float: left;
+        width: 30%;
+        font-weight: 500;
+        padding: 7px;
+        box-sizing: border-box;
+    }
+
+    & .form-control {
+        grid-column: 2;
+        width: 70%;
+        float: left;
+        padding: 7px;
+        box-sizing: border-box;
+        border-radius: 3px;
+        border: 2px solid #dfdddd;
+        font-size: 14px;
+        transition: 0.2s;
+        outline: none;
+
+        &:focus {
+            border: 2px solid #1c1cd1;
+        }
+    }
+
+    & .invalid,
+    & .invalid:focus {
+        background: #dbc7c7;
+        border-color: #ff0000;
+    }
+
+}
+
+& .text-danger {
+    color: #ff0000;
+    align-items: baseline;
+    width: 100%;
+    margin: 2px 0px 6px 0px;
+}
