@@ -5,7 +5,7 @@ Some small react applications, done with the scope to learn and understand react
 1. Run: <b>npm install</b><br/>
 2. To start up the first app <b/>food order app</b>  execute: <b>npm start --prefix food-order-app </b>
 
-<h3>Printscreens with the actual stage of the application:</h3>
+<h3>Printscreens with the actual stage of the food-order application:</h3>
 
 ![image](https://github.com/simonatocanie/multiple-small-apps/assets/43148857/f353c73f-fa91-45fb-a9a4-322c0165c67c)
 
