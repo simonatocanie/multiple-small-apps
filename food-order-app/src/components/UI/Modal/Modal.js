@@ -12,7 +12,7 @@ const BackDrop = (props) => {
 
 const ModalContent = (props) => {
     return (
-        <div className={classes.modal}>
+        <div className={classes['modal-content']}>
             {props.children}
         </div>
     )
@@ -30,9 +30,12 @@ export const Modal = (props) => {
 
 
 export const ModalContainer = (props) => {
+    let classList = '';
+    const classesSplit = props.className.split(' ');
+    classesSplit.map(item => classList += classes[item] + ' ')
 
     return (
-        <div className={classes[props.className]}>
+        <div className={classList}>
             {props.children}
         </div>
     )

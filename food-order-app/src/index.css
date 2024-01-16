@@ -14,15 +14,44 @@ code {
 
 
 
-#modalOverlay{
-  position: absolute; /*hidden from the page*/
+#modalOverlay {
+  position: absolute;
+  /*hidden from the page*/
 }
 
 /*text styles*/
-.text-danger{
-  color: #c42e2e;
+.text {
   font-style: italic;
   clear: left;
   text-wrap: nowrap;
   text-align: center;
+  grid-column: span 2;
+
+  &.text-danger {
+    color: #c42e2e;
+  }
+
+  &.text-right {
+    text-align: right;
+    grid-column: span 2;
+    margin: 3px 0px 0px 0px;
+  }
+
+  &.text-success {
+    color: #0e940e;
+  }
+
+  &.row-5 {
+    grid-row: 5/6;
+  }
+}
+
+.text-center {
+  text-align: center;
+  padding-top: 30px;
+  margin-bottom: 0px;
+
+  .text-bold {
+    font-weight: 700;
+  }
 }

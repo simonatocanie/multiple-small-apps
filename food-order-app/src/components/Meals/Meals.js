@@ -7,13 +7,13 @@ import Spinner from '../UI/Spinner/Spinner';
 
 const Meals = () => {
     const [meals, setMeals] = useState([]);
-    const { error, isLoading, fetchData: getMeals } = useHttp();
+    const { error, isLoading, sendRequest: getMeals } = useHttp();
 
 
     useEffect(() => {
-        const transformData = (responseData) => {
+        const transformData = async (responseData) => {
             let loadedMeals = [];
-    
+
             for (let key in responseData) {
                 loadedMeals.push({
                     id: key,
@@ -21,12 +21,12 @@ const Meals = () => {
                     description: responseData[key].description,
                     price: responseData[key].price,
                 })
-    
+
                 setMeals(loadedMeals)
             }
         } //if not can be set outside from useEffect with useCallback
-        
-        getMeals({}, transformData);
+
+        getMeals({ url: 'meals.json' }, transformData);
     }, [getMeals]);
 
     const mealList = meals.map((item) =>
@@ -35,7 +35,7 @@ const Meals = () => {
 
     return (
         <Card>
-            {error && <p className='text-danger'>{error}</p>}
+            {error && <p className='text text-danger'>{error}</p>}
             <ul>
                 {mealList}
             </ul>

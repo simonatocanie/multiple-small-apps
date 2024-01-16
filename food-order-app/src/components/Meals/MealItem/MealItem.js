@@ -1,26 +1,30 @@
-import { useContext, useRef, useState } from 'react';
+import { useContext } from 'react';
+import useInput from '../../../hooks/use-input';
 import CartContext from '../../../store/cart-context';
 import Button from '../../UI/Button/Button';
 import Input from '../../UI/Input/Input';
 import classes from './MealItem.module.css';
 
+const mustBeInInterval = (value) => value.trim().length > 0 && +value > 1 && +value <= 5;
 const MealItem = ({ item }) => {
-    const counterRef = useRef();
-    const [isCounterValid, setisCounterValid] = useState(true);
+    const {
+        value: counterValue,
+        hasValueError,
+        isValueValid: isCounterValid,
+        valueChangeHandler: counterChangeHandler,
+        valueBlurHandler: counterBlurHandler
+    } = useInput(mustBeInInterval, '1');
+
     const cartCtx = useContext(CartContext);
 
     const submitHandler = (event) => {
         event.preventDefault();
-        const counterValue = counterRef.current.value;
 
-        if (counterValue.trim().length === 0 || +counterValue < 1 || +counterValue > 5) {
-            setisCounterValid(false);
+        if (hasValueError) {
             return;
-        } else {
-            setisCounterValid(true);
         }
-        
-        cartCtx.addItem({ ...item, counter: +counterRef.current.value })
+
+        cartCtx.addItem({ ...item, counter: +counterValue })
     }
 
     return (
@@ -34,13 +38,14 @@ const MealItem = ({ item }) => {
             </div>
             <form onSubmit={submitHandler} noValidate>
                 <Input id='counter' label='Counter' type='number' min='1' max='5'
-                    defaultValue='1' ref={counterRef} />
+                    className='input-counter' value={counterValue} onChange={counterChangeHandler}
+                    onBlur={counterBlurHandler} />
                 <div className={classes.actions}>
                     <Button className="btn btn-primary" type='submit' label='+ Add' />
                     {/* <Button className="btn btn-light" type='button' label='Details' />*/}
-                    {!isCounterValid && <p className='text-danger'> Should be between (1-5).</p>}
                 </div>
             </form>
+            {hasValueError && <p className='text text-danger text-right'> Should be between (1-5).</p>}
         </li>
     )
 }

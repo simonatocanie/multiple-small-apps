@@ -21,3 +21,12 @@
         }
     }
 }
+
+.checkout {
+    grid-column: span 2;
+    grid-row:4/5;
+    float: left;
+    overflow: auto;
+    justify-content: space-between;
+    width: 100%;
+}

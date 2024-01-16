@@ -1,0 +1,10 @@
+.actions {
+    grid-row: span 2;
+    align-self: center;
+    margin: auto;
+    width: fit-content;
+
+    button:last-of-type {
+        margin-left: 3px !important;
+    }
+}

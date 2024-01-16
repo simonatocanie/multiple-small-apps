@@ -58,6 +58,16 @@
         }
     }
 
+    &.btn-success {
+        background-color: #4d104e;
+        color: #ffffff;
+
+        &:hover {
+            opacity: 50%;
+            color: black;
+        }
+    }
+
     &.btn-light {
         background-color: #f7f3f3;
         color: black;
