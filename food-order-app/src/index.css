@@ -24,4 +24,5 @@ code {
   font-style: italic;
   clear: left;
   text-wrap: nowrap;
+  text-align: center;
 }
