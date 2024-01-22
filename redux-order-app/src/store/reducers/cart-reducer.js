@@ -1,14 +1,19 @@
 import { createSlice } from '@reduxjs/toolkit';
 
-
-const initialState = { products: [], totalQuantity: 0, totalPrice: 0 }
+const initialState = { products: [], totalQuantity: 0, totalPrice: 0, changed: false }
 const cartSlice = createSlice({
     initialState: initialState,
     name: 'cart',
     reducers: {
+        resetCartData(state, action) {
+            if (action.payload) {
+                state.products = action.payload.products;
+                state.totalQuantity = action.payload.totalQuantity;
+                state.totalPrice += action.payload.totalPrice;
+            }
+        },
         addItemToCart(state, action) {
             const item = action.payload;
-
             const existentItem = state.products.find(x => x.id === item.id);
             if (existentItem) {
                 state.totalPrice -= existentItem.quantity * item.price;
@@ -19,6 +24,7 @@ const cartSlice = createSlice({
                 state.totalQuantity++;
             }
             state.totalPrice += item.quantity * item.price;
+            state.changed = true;
         },
 
         removeItemFromCart(state, action) {
@@ -26,15 +32,16 @@ const cartSlice = createSlice({
             const existentItem = state.products.find(x => x.id === id);
             state.totalPrice -= existentItem.quantity * existentItem.price;
             state.products = state.products.filter(item => item.id !== id);
+            //state.changed = true;
         },
 
         increaseQuantityFromCart(state, action) {
             const id = action.payload;
-            console.log(id)
             const existentItem = state.products.find(x => x.id === id);
             existentItem.quantity++;
 
             state.totalPrice += existentItem.price;
+            // state.changed = true;
         },
 
         decreaseQuantityFromCart(state, action) {
@@ -47,6 +54,10 @@ const cartSlice = createSlice({
                 existentItem.quantity--;
             }
             state.totalPrice -= existentItem.price;
+            //state.changed = true;
+        },
+        resetChangedValue(state, action) {
+            state.changed = action.payload;
         }
     }
 });

@@ -28,7 +28,6 @@ export const counterActions = counterSlice.actions;
 export default counterSlice.reducer;
 
 // const counterReducer = (state = initialState, action) => {
-//     console.log(state)
 //     if (action.type === 'increment') {
 //         return {
 //             ...state,
