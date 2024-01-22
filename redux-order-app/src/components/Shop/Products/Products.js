@@ -1,12 +1,23 @@
-import { useDispatch } from 'react-redux';
-import { cartActions } from '../../../store/reducers/cart-reducer';
+import { useEffect } from 'react';
+import { useDispatch, useSelector } from 'react-redux';
 import Button from '../../UI/Button/Button';
 import Input from '../../UI/Input/Input';
 import DUMMY_PRODUCTS from '../../../assets/data'
 import classes from './Products.module.css';
+import { sendCartData } from '../../../store/actions/cart-actions';
+import { cartActions } from '../../../store/reducers/cart-reducer';
 
 const Products = (props) => {
     const dispatch = useDispatch();
+    const cart = useSelector(state => state.cart);
+
+    useEffect(() => {
+        if (cart.changed) {
+            dispatch(sendCartData(cart))
+            dispatch(cartActions.resetChangedValue(false));
+        }
+
+    }, [cart, dispatch])
 
     const addItemHandler = (item) => {
         if (item.quantity) {

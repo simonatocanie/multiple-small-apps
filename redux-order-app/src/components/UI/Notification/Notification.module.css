@@ -1,0 +1,44 @@
+.snackbar {
+    position: absolute;
+    top: 7%;
+    z-index: 99;
+    display: flex;
+    width: 400px;
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+    border-radius: 3px;
+    color: white;
+    right:0;
+
+    &.text-success{
+        background-color: #244224;
+    }
+
+    &.text-danger{
+        background-color: #ff0000;
+    }
+
+    &.text-primary{
+        background-color: #2655d4;
+    }
+
+    p {
+        margin: 1px;
+    }
+
+    & .title {
+      font-size: 18px;
+    }
+
+    & .message {}
+
+    button{
+        width:20px;
+        height:20px;
+        color: white;
+        align-self: end;
+        background-color: transparent;
+        border: none;
+    }
+}

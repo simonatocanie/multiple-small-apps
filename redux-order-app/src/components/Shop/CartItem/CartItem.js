@@ -1,4 +1,4 @@
-import { useDispatch } from "react-redux";
+import { useDispatch} from "react-redux";
 import { cartActions } from '../../../store/reducers/cart-reducer';
 import Button from '../../UI/Button/Button';
 import classes from './CartItem.module.css';
@@ -6,7 +6,7 @@ import classes from './CartItem.module.css';
 const CartItem = (props) => {
     const {item} = props;
     const dispatch = useDispatch();
-    
+
     const removeitemHandler = () => {
         dispatch(cartActions.removeItemFromCart(item.id));
     }
