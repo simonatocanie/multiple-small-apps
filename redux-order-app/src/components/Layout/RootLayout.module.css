@@ -9,14 +9,6 @@ body,
     grid: min-content auto min-content/ minmax(170px, 20%) 80%;
 }
 
-header {
-    grid-column: span 2;
-    padding: 10px;
-    background-color: #b094b8;
-    color: white;
-}
-
-
 footer {
     grid-row: 3/4;
     grid-column: span 2;

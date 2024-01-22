@@ -1,0 +1,18 @@
+ul.cart {
+    margin: auto;
+    list-style-type: none;
+    display: grid;
+    grid: 1fr/ 1fr;
+}
+
+.text-right {
+    width: 200px;
+    float: right;
+
+    & span.total-price {
+        color: #8a2be2;
+        font-weight: 700;
+        float: inline-end;
+        margin-right: 60px;
+    }
+}

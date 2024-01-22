@@ -6,7 +6,7 @@ const Aside = () => {
         <aside>
             <ul>
                 <li>
-                    <Link to='/' >Increment</Link>
+                    <Link to='/' >Counter</Link>
                 </li>
                 <li>
                     <Link to='/order-app' >Order Logic</Link>

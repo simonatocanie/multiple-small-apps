@@ -1,0 +1,91 @@
+@import '../../../styles/variable-styles.css';
+
+button {
+    font-size: 14px;
+    cursor: pointer;
+
+    &.btn {
+        border-radius: 5px;
+        box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.75);
+        border-color: transparent;
+        font-size: 16px;
+        font-weight: 600;
+
+        &:nth-of-type(n+1) {
+            margin-right: 10px;
+        }
+        &.btn-xs{
+           max-width:40px;
+           padding: 5px 12px;
+           margin-top: 15px;
+           
+        }
+
+        &.btn-sm {
+            padding: 5px 10px;
+            min-width: 80px;
+        }
+
+        &.btn-md {
+            padding: 8px 15px;
+        }
+
+        &.btn-primary {
+            background-color: var(--primary-bg-color);
+            color: white;
+
+            &:hover {
+                background-color: #5a5ade;
+                color: black;
+            }
+        }
+
+        &.btn-light {
+            background-color: var(--light-bg-color);
+            color: var(--black-bg-color);
+
+            &:hover {
+                background-color: #c3c0c0;
+                color: #fff;
+            }
+        }
+
+        &.btn-secondary {
+            background-color: var(--secondary-bg-color);
+            color: var(--white-bg-color);
+
+            &:hover {
+                background-color: #a4a2a2;
+                color: var(--white-bg-color);
+            }
+        }
+
+        &.btn-success {
+            background-color: var(--success-bg-color);
+            color: var(--white-bg-color);
+
+            &:hover {
+                background-color: #00c000;
+                color: var(--white-bg-color);
+            }
+        }
+    }
+
+    &.link {
+        border: none;
+        background-color: transparent;
+        color: white;
+
+        &:hover{
+            color: #820af1;
+        }
+    }
+
+    &.remove-button{
+        width: 60px;
+        height: 60px;
+        border:none;
+        background-color: transparent;
+        color: red;
+    }
+}

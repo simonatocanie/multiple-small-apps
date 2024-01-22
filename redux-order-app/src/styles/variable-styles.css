@@ -1,0 +1,11 @@
+/*only for testing purposes*/
+* {
+    --primary-bg-color: #0000ff;
+    --success-bg-color: #008000;
+    --danger-bg-color: #ff0000;
+    --secondary-bg-color: #808080;
+    --light-bg-color: #f4efef;
+
+    --black-bg-color:#000000;
+    --white-bg-color:#ffffff;
+}

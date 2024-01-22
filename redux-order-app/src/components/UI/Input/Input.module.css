@@ -1,0 +1,16 @@
+.form-group {
+    display: flex;
+    margin: 10px 0px;
+
+    label {
+        width: 30%;
+        padding: 5px;
+        font-weight: 500;
+    }
+
+    .form-control {
+        width: 70%;
+        padding: 5px;
+        justify-content: end;
+    }
+}

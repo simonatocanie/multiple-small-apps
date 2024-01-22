@@ -1,0 +1,12 @@
+.card {
+    padding: 30px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+    box-sizing: border-box;
+    border-radius: 5px;
+
+    &.md-size {
+        width: 55%;
+        min-width: 450px;
+        margin: 10% auto;
+    }
+}

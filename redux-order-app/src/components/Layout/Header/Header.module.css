@@ -1,0 +1,42 @@
+header {
+    grid-column: span 2;
+    background-color: #d6bcde;
+    color: white;
+    padding: 0px 10%;
+    display: flex;
+
+    ul {
+        list-style-type: none;
+        text-decoration: none;
+    
+        &.text-left {
+            width:60%;
+        }
+        &.text-right {
+            width:40%;
+            text-align: right;
+            li>a{
+                float: right;
+            }
+            button{
+                float: right;
+               padding-top: 4px;
+            }
+        }
+
+        li>a {
+            text-decoration: none;
+            color: #820af1;
+            padding: 0px 25px 0px 0px;
+
+            &:hover {
+                color: white;
+            }
+
+            &:last-of-type{
+                padding-right: 6px;
+            }
+        }
+    }
+
+}
