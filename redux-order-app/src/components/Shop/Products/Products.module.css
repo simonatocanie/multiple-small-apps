@@ -1,0 +1,49 @@
+.product-grid {
+    width: 90%;
+    margin: auto;
+
+    ul {
+        list-style-type: none;
+        display: grid;
+        grid: 1fr/ 1fr 1fr 1fr 1fr 1fr;
+
+        li {
+            padding: 30px;
+            border: 1px solid #af99f8;
+            border-radius: 3px;
+            margin: 5px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+
+            & img {
+                width: 100%;
+            }
+
+            & div.product-column {
+                p {
+                    margin: 2px;
+                }
+
+                label {
+                    width: 0%;
+                    padding: 0px;
+                }
+
+                & div.display-inline {
+                    display: flex;
+            
+
+                    & input {
+                        min-width: 50px;
+                        margin-top: 5px
+                    }
+                    & button{
+                        min-width: 50px;
+                        margin: 10px;
+                    }
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,28 @@
+& li.cart-item{
+    display: grid;
+    grid: 1fr / 50px 200px 100px 1fr 1fr 50px;
+    float: right;
+
+    p{
+        display: inline;
+        justify-content: space-between;
+    }
+
+    p.name{
+        font-weight: 600;
+    }
+    p.quantity{
+        border:2px dashed #c1bfbf;
+        border-radius: 4px;
+        padding: 6px 8px;
+        width: 30px;
+        text-align: center;
+        margin: 10px 0px;
+    }
+
+    & p.price{
+        text-align: end;
+        font-weight: 600;
+        padding-top: 3px;
+    }
+}
